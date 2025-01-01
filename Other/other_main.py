@@ -787,7 +787,7 @@ def tweet_content(
             print(f"Could not retrieve content for {article_url}")
             continue
 
-        cleaned_data = clean_content(content_data)
+        cleaned_data = clean_content(content_data[0])
         tweet_text = tweet_format(title, cleaned_data, article_url)
         bot.tweet(tweet_text)
         tweeted_items.add(article_url)
